@@ -31,7 +31,7 @@ router.post<{}, MessageResponse>("/imageUpload", (req, res) => {
       return res.status(500).json({ message: "Error saving the file." });
     }
 
-    const pythonScriptPath = path.join(__dirname, "./script.py");
+    const pythonScriptPath = path.join(__dirname, "./test.py");
 
     const pythonProcess = spawn("python", [pythonScriptPath, destinationPath]);
 
